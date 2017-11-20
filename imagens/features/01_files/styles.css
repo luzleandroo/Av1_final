@@ -1,0 +1,1578 @@
+/* Template: Onetouch Mobile App Landing Page Template
+   Author: Inovatik
+   Version: 1.2
+   Created: March 2017
+   Description: Master CSS file
+*/
+
+/**********************************
+	TABLE OF CONTENTS
+
+01. General Styles 
+02. Navigation
+03. Header
+04. Testimonials
+05. Features
+06. Description 1
+07. Description 2
+08. Video
+09. About Us
+10. Newsletter
+11. Our Team
+12. Social Media
+13. Contact
+14. Footer
+15. Back To Top Button
+16. Media Queries
+**********************************/
+
+
+/***** 01. General Styles *****/
+html,
+body {
+	width: 100%;
+	height: 100%; 
+}
+
+body {
+	font: 400 16px/26px "Raleway", sans-serif;
+	color: #606060; 
+}
+
+h1 {
+	font: 500 36px/46px "Poppins", sans-serif; 
+}
+
+h2 {
+	font: 500 22px/31px "Poppins", sans-serif; 
+}
+
+h3 {
+	font: 500 21px/30px "Poppins", sans-serif; 
+}
+
+p {
+	font: 400 16px/26px "Raleway", sans-serif; 
+}
+
+a {
+	color: #606060;
+	text-decoration: underline; 
+}
+
+a:hover {
+	color: #000; 
+}
+
+/* Buttons */
+.button-small-solid,
+.button-small-solid:focus {
+	font: 500 16px/26px "Poppins", sans-serif;
+	background-color: #36b57c;
+	color: #fff;
+	border-radius: 3px;
+	padding: 10px 40px 10px 40px;
+	text-decoration: none;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;			
+}
+
+.button-small-solid:hover {
+	background-color: #50a2c4;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer; 
+}
+
+.button-small-transparent,
+.button-small-transparent:focus {
+	font: 400 16px/26px "Poppins", sans-serif;
+	background: transparent;
+	color: #17c15f;
+	border: 2px solid #17c15f;
+	border-radius: 25px;
+	padding: 8px 40px 8px 40px;
+	text-decoration: none; 
+}
+
+.button-small-transparent:hover {
+	background-color: #4cadee;
+	color: #606060;
+	border: 2px solid #4cadee;
+	text-decoration: none;
+	cursor: pointer; 
+}
+
+/* Carousel */
+.carousel-control .glyphicon-menu-right,
+.carousel-control .glyphicon-menu-left {
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: inline-block;
+	margin-top: -10px;
+	font-size: 30px; 
+}
+
+.carousel-control .glyphicon-menu-left {
+	left: 50%;
+	margin-left: -10px; 
+}
+
+.carousel-control .glyphicon-menu-right {
+	right: 50%;
+	margin-right: -10px; 
+}
+
+a.left.carousel-control, a.right.carousel-control {
+	opacity: 1; 
+}
+
+.right.carousel-control {
+	background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 100%); 
+}
+
+.left.carousel-control {
+	background-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 100%); 
+}
+
+/* Forms success and error alerts formatting */
+#nmsgSubmit.h3.text-center.tada.animated.text-success {
+	margin-top: 10px;
+	font: 400 20px/32px "Raleway", sans-serif;
+	color: #606060; 
+}
+
+#nmsgSubmit.h3.text-center.text-danger {
+	font: 400 20px/32px "Raleway", sans-serif;
+	color: #606060; 
+}
+
+#cmsgSubmit.h3.text-center.tada.animated.text-success {
+	font: 400 20px/32px "Raleway", sans-serif;
+	color: #606060; 
+}
+
+#cmsgSubmit.h3.text-center.text-danger {
+	font: 400 20px/32px "Raleway", sans-serif;
+	color: #606060; 
+}
+
+
+/***** 02. Navigation *****/
+
+/* Navbar */
+.navbar-custom {
+	background-color: #41a2ef;
+	border: none;
+}
+
+/* Image logo size */
+.navbar-custom .navbar-brand.img-logo img {
+	margin: 0px;
+	width: 98px;
+	height: 31px;
+}
+
+/* Image logo position in mobile viewport (floating and not floating over content) */
+.navbar-custom.affix .navbar-brand.img-logo,
+.navbar-custom.affix-top .navbar-brand.img-logo {
+	margin: 0px;
+	padding: 9px 0px 0px 15px;
+}
+
+/* Text logo */
+.navbar-custom.affix-top .navbar-brand,
+.navbar-custom.affix .navbar-brand {
+	margin: 0px;	
+	padding: 13px 0px 0px 15px;
+	color: #fff; 
+	font: 600 22px/1em "Raleway", sans-serif;
+	text-decoration: none;
+}
+
+/* Mobile menu toggle button */
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+	background-color: #fff;
+	color: #606060;
+}
+
+.navbar-custom .navbar-toggle,
+.navbar-custom .navbar-toggle.collapsed  {
+	margin: 7px 15px 0px 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-color: #fff;
+	background-color: transparent;
+	color: #fff;
+	font: 500 12px/19px "Poppins", sans-serif; 
+}
+
+/* Navbar menu links -regular- in mobile viewport (floating and not floating over content) */
+.navbar-custom.affix-top .nav li a,
+.navbar-custom.affix .nav li a {
+	color: #fff;
+	opacity: 0.7;
+	text-decoration: none; 
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font: 500 12px/22px "Poppins", sans-serif;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;			
+}
+
+/* Navbar menu links -hover- in mobile viewport (floating and not floating over content) */
+.navbar-custom.affix-top .nav li a:hover,
+.navbar-custom.affix .nav li a:hover {
+	opacity: 1;
+}
+
+
+/* Navbar menu links -active- in mobile viewport (floating and not floating over content) */
+.navbar-custom.affix-top .nav li.active a,
+.navbar-custom.affix .nav li.active a {
+	opacity: 1;
+	background: none;
+	color: #fff;
+}
+
+
+/* Style Switcher */
+#toggle-switcher {
+	display: block;
+	width: 40px;
+	height: 41px;
+	background: #fff;
+	position: absolute;
+	left: -40px;
+	top: 30px;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-right: none; 
+}
+
+#toggle-switcher img.style-gear {
+	width: 47x;
+	height: 47px;
+	margin-top: -4px;
+	margin-left: -4px;
+}
+
+#style-switcher {
+	position: fixed;
+	z-index: 1000;
+	top: 70px;
+	right: -178px;
+	width: 178px;
+	background: #fff;
+	padding: 10px 10px 12px 10px;
+	border: 1px solid #ddd; 
+	border-radius: 2px;
+}
+
+#style-switcher .style-switcher-cell {
+	display: inline-block;
+	max-width: 140px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+#style-switcher .style-switcher-cell img {
+	margin-top: 10px;
+	width: 140px;
+	height: 86px;
+	display: inline-block;
+}
+
+#style-switcher h1 {
+	font: 600 20px/1.3em "Raleway", sans-serif;
+	text-align: center;
+	color: #3a5c68;
+	margin-top: 0px;
+	margin-left: -11px;
+	margin-bottom: 0px;
+}
+
+#style-switcher a {
+	font: 400 12px/1.2em "Source Sans Pro", sans-serif;
+	color: #4b555d;
+	margin-top: 5px;
+	text-align: right;
+	text-decoration: none; 	
+	display: block;
+	text-align: center;
+}
+
+#style-switcher a:hover {
+	color: #298aff;
+}
+
+#style-switcher .style-switcher-buttons {
+	margin-top: 10px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	text-align: center;
+}
+
+#style-switcher a.style-switcher-back-button {
+	padding: 8px 20px 6px 20px;
+	border: 1px solid #298aff;
+	color: #298aff;
+	border-radius: 25px;
+	font: 600 10px/1em "Raleway", sans-serif;
+	display: inline-block;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+	text-align: center;
+}
+
+#style-switcher a.style-switcher-back-button:hover {
+	color: #fff;
+	background-color: #298aff;
+}
+
+#style-switcher a.style-switcher-buy-button {
+	margin-left: 3px;
+	margin-right: 3px;
+	border: 1px solid #298aff;
+	color: #fff;
+	background-color: #298aff;
+	border-radius: 25px;
+	padding: 8px 20px 6px 20px;
+	font: 600 10px/1em "Raleway", sans-serif;
+	display: inline-block;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+	text-align: center;
+}
+
+#style-switcher a.style-switcher-buy-button:hover {
+	color: #fff;
+	background-color: #003459;
+	border: 1px solid #003459;
+}
+
+
+/***** 03. Header *****/
+header {
+	position: relative;
+	min-height: auto;
+	width: 100%;
+	background-color: #41a2ef;
+	min-height: 100%; 
+}
+
+/* IE fix for vertical alignment in flex box */
+header .flex-container-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%; 
+}
+
+header .header-content {
+	position: relative;
+	width: 100%;
+	padding: 100px 15px;
+	z-index: 2;
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh; 
+}
+
+header .header-content img {
+	margin-top: 15px;
+	text-align: center; 
+}
+
+header .header-content .call-to-action {
+	margin-top: 10px; 
+}
+
+header .header-content .call-to-action h1 {
+	font: 500 42px/50px "Poppins", sans-serif;
+	color: #fff;
+	margin-bottom: 25px;
+	margin-top: 40px; 
+}
+
+header .header-content .call-to-action p {
+	font: 400 18px/30px "Raleway", sans-serif;
+	color: #fff;
+	margin-left: 0%;
+	margin-right: 0%; 
+}
+
+header .header-content .call-to-action .app-price {
+	font: 400 26px/32px "Raleway", sans-serif; 
+}
+
+header .header-content .call-to-action .header-buttons {
+	margin-top: 30px;
+	text-align: center; 
+}
+
+header .header-content .call-to-action .header-buttons a {
+	display: inline-block; 
+}
+
+header .header-content .call-to-action .header-buttons :nth-child(2) {
+	margin-top: 18px; 
+}
+
+header .header-content .call-to-action .header-buttons .button-large-solid,
+header .header-content .call-to-action .header-buttons .button-large-solid:focus {
+	margin-left: 4px;
+	margin-right: 4px;
+	font: 500 16px/32px "Poppins", sans-serif;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	padding: 8px 28px 8px 28px;
+	text-decoration: none; 
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;		
+}
+
+header .header-content .call-to-action .header-buttons a.button-large-solid .google-icon {
+	background: url("../images/google-icon.svg") no-repeat center;
+	background-size: 16px 17px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+	height: 17px;
+	margin-bottom: -3px;
+	margin-right: 6px;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;		
+}
+
+header .header-content .call-to-action .header-buttons a.button-large-solid .apple-icon {
+	background: url("../images/apple-icon.svg") no-repeat center;
+	background-size: 17px 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+	height: 19px;
+	margin-bottom: -4px;
+	margin-right: 6px;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;		
+}
+
+header .header-content .call-to-action .header-buttons a:hover.button-large-solid .google-icon {
+	background: url("../images/google-icon-hover.svg") no-repeat center;
+	background-size: 16px 17px; 
+	height: 17px;
+	margin-bottom: -3px;
+	margin-right: 6px;
+}
+
+header .header-content .call-to-action .header-buttons a:hover.button-large-solid .apple-icon {
+	background: url("../images/apple-icon-hover.svg") no-repeat center;
+	background-size: 17px 20px; 
+	height: 19px;
+	margin-bottom: -4px;
+	margin-right: 6px;
+}
+
+header .header-content .call-to-action .header-buttons a:hover.button-large-solid {
+	background-color: #fff;
+	color: #41a2ef; 
+}
+
+
+/***** 04. Testimonials *****/
+#testimonials {
+	padding-top: 0px;
+	padding-bottom: 70px;
+	background-color: #eeeeee; 
+}
+
+#testimonials #carousel-example-generic {
+	text-align: center;
+	margin-top: 60px;
+	margin-left: 5%;
+	margin-right: 5%; 
+}
+
+#testimonials #carousel-example-generic img {
+	width: 105px;
+	height: 105px;
+	margin-bottom: 20px; 
+}
+
+#testimonials #carousel-example-generic p {
+	padding-top: 15px;
+	width: 100%; 
+}
+
+#testimonials #carousel-example-generic h2 {
+	font: 500 21px/30px "Poppins", sans-serif; 
+}
+
+#testimonials #carousel-example-generic a.left.carousel-control, 
+#testimonials #carousel-example-generic a.right.carousel-control {
+	background: none; 
+}
+
+#testimonials #carousel-example-generic .carousel-indicators {
+	position: static;
+	margin-top: 0px; 
+}
+
+#testimonials #carousel-example-generic .carousel-indicators .active {
+	background-color: #606060;
+	border: 2px solid #606060;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px; 
+}
+
+#testimonials #carousel-example-generic .carousel-indicators li {
+	border: 1px solid #606060;
+	width: 12px;
+	height: 12px;
+	margin: 0px;
+	margin-right: 4px; 
+}
+
+#testimonials #carousel-example-generic .carousel-indicators li:hover {
+	background-color: #606060;
+	border: 2px solid #606060;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px; 
+}
+
+#testimonials #carousel-example-generic .carousel-content {
+	color: #606060;
+	display: flex;
+	align-items: center; 
+}
+
+
+/***** 05. Features  *****/
+#features {
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+#features h1 {
+	margin-bottom: 30px; 
+}
+
+#features .feature-box {
+	margin-top: 40px;
+	margin-left: -15px;
+	margin-right: -15px; 
+}
+
+#features .features-icons {
+	font-size: 40px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	margin-top: 4px;
+	float: left;
+	color: #41a2ef; 
+}
+
+#features .features-text {
+	margin-left: 60px;
+	margin-top: 0px; 
+}
+
+#features .features-text h3 {
+	margin-top: 0px;
+	margin-bottom: 3px; 
+}
+
+#features #myCarousel {
+	display: inline-block;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	height: 80%; 
+}
+
+#features #myCarousel .carousel-control.left {
+	background: none;
+	margin-top: -40px;
+	opacity: 0.7;
+	margin-left: 20px; 
+}
+
+#features #myCarousel .carousel-control.right {
+	right: 0;
+	left: auto;
+	background: none;
+	margin-top: -40px;
+	padding-left: 20px;
+	opacity: 0.7;
+	margin-right: 20px; 
+}
+
+#features #myCarousel .carousel-control:hover,
+#features #myCarousel .carousel-control:focus {
+	color: #fff;
+	text-decoration: none;
+	filter: alpha(opacity=90);
+	outline: 0;
+	opacity: 1; 
+}
+
+#features #myCarousel .carousel-caption {
+	position: relative;
+	right: 0%;
+	margin-bottom: 20px;
+	left: 0%;
+	z-index: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #606060;
+	text-align: center;
+	text-shadow: none; 
+}
+
+#features #myCarousel .carousel-caption p {
+	margin-top: 23px;
+	margin-bottom: 2px; 
+}
+
+#features #myCarousel .carousel-indicators {
+	margin-bottom: -40px; 
+}
+
+#features #myCarousel .carousel-indicators li {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin: 1px;
+	text-indent: -999px;
+	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid #606060;
+	border-radius: 10px; 
+}
+
+#features #myCarousel .carousel-indicators .active {
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	background-color: #606060; 
+}
+
+
+/***** 06. Description 1 *****/
+#description-1 {
+	padding-top: 60px;
+	padding-bottom: 80px;
+	background-color: #eeeeee; 
+}
+
+#description-1 h1 {
+	margin-bottom: 40px; 
+}
+
+#description-1 img {
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+#description-1 h2 {
+	margin-top: 40px;
+	margin-bottom: 20px; 
+}
+
+#description-1 .button-small-solid {
+	display: inline-block;
+	margin-top: 15px; 
+}
+
+
+/***** 07. Description 2 *****/
+#description-2 {
+	padding-top: 80px;
+	padding-bottom: 80px; 
+}
+
+#description-2 .nav-pills {
+	margin-top: 40px;
+	margin-bottom: 30px; 
+}
+
+#description-2 .nav-pills li {
+	text-align: center;
+	width: 100%; 
+}
+
+#description-2 .nav-pills li a {
+	font: 500 16px/26px "Poppins", sans-serif;
+	background-color: none;
+	color: #6a6a6a;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	margin-right: 4px;
+	margin-top: 10px;
+	padding: 10px 30px 10px 30px;
+	text-decoration: none;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;			
+}
+
+#description-2 .nav-pills li a:hover {
+	background-color: #50a2c4;
+	color: #fff;
+	border: 1px solid #50a2c4; 
+}
+
+#description-2 .nav-pills li.active a {
+	background-color: #50a2c4;
+	color: #fff;
+	border: 1px solid #50a2c4; 
+}
+
+#description-2 #tab_a ul {
+	list-style: none; 
+	text-indent: -1.4em;
+	margin-left: 3px;
+}
+
+#description-2 #tab_a ul li {
+	margin-top: 5px;
+}
+
+#description-2 #tab_a .button-small-solid {
+	display: inline-block;
+	margin-top: 15px; 
+}
+
+#description-2 #tab_b {
+	margin-top: 20px; 
+}
+
+#description-2 #tab_b .progress {
+	height: 30px;
+	border-radius: 4px;
+	margin-top: 20px; 
+}
+
+#description-2 #tab_b .progress-bar {
+	text-align: left;
+	font: 400 14px/22px "Poppins", sans-serif;
+	background-color: #36b57c;
+	color: #fff;
+	padding-left: 20px;
+	padding-top: 5px; 
+}
+
+#description-2 #tab_c .button-small-solid {
+	display: inline-block;
+	margin-top: 15px; 
+}
+
+#description-2 .tab-content ul {
+	padding-left: 20px; 
+}
+
+#description-2 .tab-content ul .checkmark {
+	margin-right: 10px; 
+}
+
+#description-2 img {
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+
+/***** 08. Video *****/
+#video {
+	padding-top: 100px;
+	padding-bottom: 80px;
+	background-color: #36b57c;
+}
+
+#video p {
+	color: #fff;
+	margin-top: 30px; 
+}
+
+
+/***** 09. About Us *****/
+#about-us {
+	padding-top: 60px;
+	padding-bottom: 90px; 
+}
+
+#about-us h1 {
+	margin-bottom: 30px; 
+}
+
+#about-us p {
+	margin-bottom: 50px; 
+}
+
+#about-us h2 {
+	
+	margin-top: 80px;
+	margin-bottom: -40px; 
+}
+
+#about-us .about-image {
+	width: 100%; 
+}
+
+#about-us .development-process {
+	text-align: left; 
+}
+
+#about-us .development-process img {
+	margin-top: 90px;
+	margin-bottom: 30px;
+	border-radius: 3px; 
+}
+
+#about-us .development-process .text-div {
+	margin-top: 13px; 
+}
+
+#about-us .development-process .text-div .box-title {
+	font: 600 20px/30px "Raleway", sans-serif;
+	margin-top: 20px;
+	margin-bottom: 10px; 
+}
+
+#about-us .development-process .text-div p {
+	margin-bottom: 5px;
+	margin-left: 0%;
+	margin-right: 0%; 
+}
+
+#about-us .development-process .button-small-solid {
+	display: inline-block;
+	margin-top: 20px; 
+}
+
+
+/***** 10. Newsletter *****/
+#newsletter {
+	padding-top: 80px;
+	padding-bottom: 70px;
+	background-color: #eeeeee; 
+}
+
+#newsletter p {
+	margin-bottom: 60px;
+	margin-left: 5%;
+	margin-right: 5%; 
+}
+
+#newsletter form {
+	margin-top: 15px;
+}
+
+/* Firefox 19+ , IE */
+#newsletter form ::-webkit-input-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+#newsletter form ::-moz-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+#newsletter form :-ms-input-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+#newsletter form input:-moz-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+#newsletter form input {
+	margin-bottom: 15px;
+	width: 100%;
+	height: 42px;
+	background: transparent;
+	font: 400 16px/26px "Raleway", sans-serif;
+	color: #606060;
+	border: none;
+	box-shadow: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #000;
+	text-align: center; 
+}
+
+#newsletter form input:focus, #newsletter form textarea:focus {
+	box-shadow: 0 5px 2px -2px #bebebe; 
+}
+
+#newsletter form button {
+	display: inline-block;
+	border: none;
+	margin-top: 10px;
+}
+
+
+/***** 11. Our Team *****/
+#our-team {
+	padding-top: 60px;
+	padding-bottom: 70px;
+	background-color: #41a2ef;
+}
+
+#our-team h1 {
+	margin-bottom: 0px;
+	color: #fff; 
+}
+
+#our-team .team-members {
+	display: inline-block; 
+}
+
+#our-team .team-members img {
+	width: 81%;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-top: 40px; 
+}
+
+#our-team .team-members p {
+	margin-top: 15px;
+	color: #fff; 
+}
+
+#our-team .team-members p .job-title {
+	font-weight: 500; 
+}
+
+
+/***** 12. Social Media *****/
+#social-media {
+	padding-top: 19px;
+	padding-bottom: 18px;
+	background-color: #36b57c; 
+}
+
+#social-media span {
+	font-size: 40px;
+	color: #fff;
+	margin: 7px 5px 7px 5px; 
+}
+
+#social-media a {
+	opacity: 0.7;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;		
+}
+
+#social-media a:hover {
+	opacity: 1; 
+}
+
+
+/***** 13. Contact Section *****/
+#contact {
+	padding-top: 50px;
+	padding-bottom: 60px;
+	background-color: #fff; 
+}
+
+#contact h1 {
+	margin-bottom: 40px; 
+}
+
+#contact p {
+	margin-left: 5%;
+	margin-right: 5%; 
+}
+
+#contact form {
+	margin-top: 40px; 
+}
+
+/* Chrome/Opera/Safari */
+#contact form ::-webkit-input-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+/* Firefox 19+ */
+#contact form ::-moz-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+/* IE 10+ */
+#contact form :-ms-input-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+/* Firefox 18- */
+#contact form :-moz-placeholder {
+	color: #606060;
+	opacity: 0.8; 
+}
+
+#contact form input {
+	height: 42px;
+	background: transparent;
+	font: 400 16px/26px "Raleway", sans-serif;
+	color: #606060;
+	border: none;
+	box-shadow: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #000;
+	text-align: center;
+	margin-top: 20px; 
+}
+
+#contact form input:focus, #contact form textarea:focus {
+	box-shadow: 0 5px 2px -2px #bebebe; 
+}
+
+#contact form textarea {
+	background-color: transparent;
+	color: #606060;
+	font: 400 16px/26px "Raleway", sans-serif;
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	margin-top: 50px; 
+}
+
+#contact form textarea[placeholder] {
+	text-align: left; 
+}
+
+#contact form button {
+	margin-top: 20px;
+	border: none; 
+}
+
+#contact .map-responsive {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+	border: 4px solid #eeeeee;
+	border-radius: 4px;
+	margin-top: 0px; 
+}
+
+#contact .map-responsive iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border: none; 
+}
+
+#contact .location-information {
+	margin-top: 60px; 
+}
+
+#contact .location-information ul {
+	margin-top: 30px;
+	list-style-type: none;
+	padding-left: 0px; 
+}
+
+#contact .location-information .location-item {
+	margin-right: 14px; 
+}
+
+#contact .location-information .location-icons {
+	font-size: 15px;
+	margin-right: 5px;
+	width: 20px; 
+}
+
+#contact .location-information .icon-phone {
+	margin-right: 1px; 
+}
+
+#contact .location-information .icon-envelope {
+	margin-right: 7px; 
+}
+
+
+/***** 14. Footer *****/
+footer {
+	padding-top: 22px;
+	padding-bottom: 18px;
+	background-color: #41a2ef; 
+}
+
+footer p {
+	font: 400 14px/22px "Raleway", sans-serif;
+	color: #eeeeee;
+	text-align: center;
+	opacity: 0.8;
+	width: 90%;
+	margin: 0 auto; 
+}
+
+
+/***** 15. Back To Top Button *****/
+a.back-to-top {
+	display: none;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 10px;
+	bottom: 10px;
+	background: #347e9c url("../images/up-arrow.png") no-repeat center 47%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background-size: 18px 18px;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;			
+}
+
+a:hover.back-to-top {
+	background-color: #193e52; 
+}
+
+
+/***** 16. Media Queries *****/
+
+/* Min-width width 768 */
+@media (min-width: 768px) {
+	
+	/* Style Switcher */
+	#style-switcher {
+		top: 150px;
+	}
+	
+	h1 {
+		font: 500 40px/52px "Poppins", sans-serif; 
+	}
+	
+	.navbar-custom {
+		background-color: transparent;
+		padding: 25px 0;
+		-webkit-transition: padding 0.3s;
+		-moz-transition: padding 0.3s;
+		transition: padding 0.3s;
+		border: none; 
+	}
+	
+	/* Image logo size not floating over content */
+	.navbar-custom.affix-top a.navbar-brand.img-logo img {
+		width: 134px;
+		height: 43px;
+	}
+	
+	/* Image logo position not floating over content */
+	.navbar-custom.affix-top a.navbar-brand.img-logo {
+		margin-top: 0px;
+		padding: 0px;
+	}
+	
+	/* Image logo size floating over content (same size as logo in mobile viewport) */
+	.navbar-custom.affix .navbar-brand.img-logo img {
+		width: 98px;
+		height: 31px;
+	}
+	
+	/* Image logo position floating over content */
+	.navbar-custom.affix .navbar-brand.img-logo {
+		padding: 9px 0px 0px 0px;
+	}
+	
+	/* Text logo */
+	.navbar-custom.affix-top .navbar-brand {
+		margin: 12px 0 0 0;
+		padding: 0px;
+		font: 600 28px/20px "Raleway", sans-serif;
+	}
+	
+	/* Text logo  */
+	.navbar-custom.affix .navbar-brand {
+		margin: 0px;
+		padding: 12px 0 0 0;
+		font: 600 26px/1em "Raleway", sans-serif;
+	}
+				
+	/* Navbar height floating over content */
+	.navbar-custom.affix {
+		padding: 0px;
+		background-color: #41a2ef;
+	}
+
+	/* Navbar menu links not floating over content */
+	.navbar-custom.affix-top .nav li a {
+		padding-top: 13px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	
+	/* Navbar menu links floating over content */
+	.navbar-custom.affix .nav li a {
+		margin-top: 14px;
+		padding-left: 12px;
+		padding-right: 12px;
+		font: 500 12px/1.3em "Poppins", sans-serif; 
+	}
+
+	header {
+		min-height: 100%; 
+	}
+
+	header .header-content {
+		margin-top: 0px; 
+	}
+
+	header .header-content img {
+		margin-top: 60px; 
+	}
+
+	header .header-content .call-to-action {
+		margin-top: 60px;
+		margin-left: 5px; 
+	}
+
+	header .header-content .call-to-action h1 {
+		font: 500 48px/60px "Poppins", sans-serif;
+		margin-top: 20px;
+		text-align: center; 
+	}
+
+	header .header-content .call-to-action p {
+		text-align: center; 
+	}
+
+	header .header-content .call-to-action .header-buttons {
+		margin-top: 0px;
+		text-align: center; 
+	}
+
+	header .header-content .call-to-action .header-buttons a:nth-child(2) {
+		margin-left: 5px; 
+	}
+
+	#testimonials {
+		padding-top: 10px;
+		padding-bottom: 60px; 
+	}
+	
+	#testimonials #carousel-example-generic .carousel-indicators {
+		position: static;
+		margin-top: -5px; 
+	}
+
+	#features {
+		padding-top: 80px;
+		padding-bottom: 100px; 
+	}
+
+	#features h1 {
+		margin-bottom: 40px; 
+	}
+
+	#features #myCarousel .carousel-indicators {
+		margin-bottom: -60px; 
+	}
+
+	#description-1 {
+		padding-top: 80px;
+		padding-bottom: 80px; 
+	}
+
+	#description-1 h1 {
+		margin-bottom: 60px; 
+	}
+
+	#description-1 .col-md-5 .text-center {
+		text-align: left; 
+	}
+
+	#description-2 {
+		padding-top: 90px;
+		padding-bottom: 100px; 
+	}
+
+	#description-2 .nav-pills li {
+		width: auto;
+		text-align: initial; 
+	}
+
+	#description-2 .tab-content .text-center {
+		text-align: left; 
+	}
+
+	#video {
+		padding-top: 120px;
+		padding-bottom: 90px; 
+	}
+
+	#about-us {
+		padding-top: 80px;
+		padding-bottom: 100px; 
+	}
+
+	#about-us h1 {
+		margin-bottom: 40px; 
+	}
+
+	#about-us .sub-heading {
+		margin-left: 10%;
+		margin-right: 10%; 
+	}
+
+	#newsletter {
+		padding-top: 100px;
+		padding-bottom: 80px; 
+	}
+
+	#newsletter p {
+		margin-bottom: 20px;
+		margin-left: 10%;
+		margin-right: 10%; 
+	}
+
+	#newsletter form input {
+		display: inline-block;
+		width: 300px;
+		margin-right: 20px; 
+	}
+
+	#our-team {
+		padding-top: 80px;
+		padding-bottom: 90px; 
+	}
+
+	#our-team h1 {
+		margin-bottom: 10px; 
+	}
+
+	#contact {
+		padding-top: 80px;
+		padding-bottom: 90px; 
+	}
+
+	#contact h1 {
+		margin-bottom: 40px; 
+	}
+
+	#contact form button {
+		margin-top: 15px; 
+	}
+
+	#contact .location-information ul {
+		margin-top: 5px; 
+	}
+
+	#contact .location-information ul li {
+		display: inline; 
+	} 
+}
+
+/* Min-width 992 */
+@media (min-width: 992px) {
+	h1 {
+		font: 500 42px/52px "Poppins", sans-serif; 
+	}
+
+	header .header-content img {
+		margin-top: 60px;
+		max-height: 460px; 
+	}
+
+	header .header-content .call-to-action {
+		margin-top: 120px;
+		margin-left: 0px; 
+	}
+
+	header .header-content .call-to-action h1 {
+		font: 500 54px/64px "Poppins", sans-serif;
+		text-align: left; 
+		margin-bottom: 20px;
+	}
+
+	header .header-content .call-to-action p {
+		text-align: left; 
+	}
+
+	header .header-content .call-to-action .header-buttons {
+		margin-top: 0px;
+		text-align: left; 
+	}
+	
+	header .header-content .call-to-action .header-buttons .button-large-solid,
+	header .header-content .call-to-action .header-buttons .button-large-solid:focus {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	header .header-content .call-to-action .header-buttons a:nth-child(2) {
+		margin-left: 8px; 
+	}
+	
+	#testimonials #carousel-example-generic .carousel-indicators {
+		position: static;
+		margin-top: 5px; 
+	}
+
+	#features .feature-box.top {
+		margin-top: 115px; 
+	}
+
+	#features .feature-box {
+		margin-top: 20px; 
+	}
+
+	#features #myCarousel {
+		display: inline-block;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		height: 100%; 
+	}
+
+	#description-1 img {
+		margin-top: 20px; 
+	}
+
+	#description-1 h2 {
+		margin-top: 0px; 
+	}
+
+	#description-1 .col-lg-5 .text-center {
+		text-align: left; 
+	}
+
+	#description-2 .nav-pills {
+		margin-top: -20px; 
+	}
+
+	#about-us .about-image {
+		width: 85%; 
+	}
+
+	#about-us .development-process img {
+		margin-top: 0px; 
+	}
+	
+	#about-us h2 {
+		margin-bottom: 40px; 
+	}
+
+	#contact .map-responsive {
+		width: 97%; 
+	}
+
+	#contact form {
+		margin-top: 0px;
+		width: 97%;
+		float: right; 
+	}
+
+	#contact form textarea {
+		margin-top: 15px; 
+	}
+
+	#contact form input {
+		margin-top: 0px; 
+	}
+
+	#contact form button {
+		margin-top: 5px; 
+	} 
+}
+
+/* Min-width 1200 */
+@media (min-width: 1200px) {
+	header .header-content img {
+		margin-top: 45px;
+		max-height: 500px; 
+	}
+
+	header .header-content .call-to-action {
+		margin-top: 140px; 
+	}
+
+	header .header-content .call-to-action h1 {
+		font: 500 58px/66px "Poppins", sans-serif; 
+	}
+
+	#features .feature-box.top {
+		margin-top: 115px; 
+	}
+
+	#features .feature-box {
+		margin-top: 70px; 
+	}
+
+	#description-1 img {
+		width: 97%;
+		margin-left: 0px;
+		margin-top: 0px; 
+	}
+
+	#description-1 h2 {
+		margin-top: 40px; 
+	}
+
+	#description-2 .nav-pills {
+		margin-top: 40px; 
+	}
+
+	#description-2 img {
+		width: 95%;
+		float: right;
+		margin-left: 0px;
+		margin-right: 0px; 
+	}
+
+	#video p {
+		margin-top: 40px; 
+	}
+
+	#contact form {
+		margin-top: 15px; 
+	}
+
+	#contact form textarea {
+		margin-top: 20px; 
+	}
+
+	#contact form button {
+		margin-top: 15px; 
+	}
+
+	#contact .location-information p {
+		margin-bottom: 0px; 
+	} 
+}
